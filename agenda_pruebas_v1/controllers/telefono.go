@@ -7,8 +7,7 @@ import (
 	"strings"
 
 	"github.com/LethSphere/Ejercicio-Beego/agenda_pruebas_v1/models"
-
-	beego "github.com/beego/beego/v2/server/web"
+	"github.com/astaxie/beego"
 )
 
 // TelefonoController operations for Telefono

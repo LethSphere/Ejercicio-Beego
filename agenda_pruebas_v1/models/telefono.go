@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/beego/beego/v2/client/orm"
+	"github.com/astaxie/beego/orm"
 )
 
 type Telefono struct {
-	Id                int       `orm:"column(id);pk;auto"`
+	Id                int       `orm:"column(id);pk"`
 	ContactoId        *Contacto `orm:"column(contacto_id);rel(fk)"`
 	Telefono          string    `orm:"column(telefono)"`
 	FechaCreacion     time.Time `orm:"column(fecha_creacion);type(timestamp with time zone)"`
@@ -50,7 +50,7 @@ func GetTelefonoById(id int) (v *Telefono, err error) {
 func GetAllTelefono(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(Telefono)).RelatedSel()
+	qs := o.QueryTable(new(Telefono))
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

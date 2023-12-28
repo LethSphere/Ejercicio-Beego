@@ -4,8 +4,6 @@ go 1.21.5
 
 require (
 	github.com/astaxie/beego v1.12.3
-	github.com/beego/bee/v2 v2.1.0
-	github.com/beego/beego v1.12.12
 	github.com/beego/beego/v2 v2.1.4
 	github.com/lib/pq v1.10.9
 )
@@ -23,7 +21,6 @@ require (
 	github.com/prometheus/common v0.42.0 // indirect
 	github.com/prometheus/procfs v0.10.1 // indirect
 	github.com/shiena/ansicolor v0.0.0-20200904210342-c7312218db18 // indirect
-	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	golang.org/x/crypto v0.10.0 // indirect
 	golang.org/x/net v0.10.0 // indirect
 	golang.org/x/sys v0.9.0 // indirect

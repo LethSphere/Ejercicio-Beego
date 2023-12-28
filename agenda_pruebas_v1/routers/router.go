@@ -10,41 +10,11 @@ package routers
 import (
 	"github.com/LethSphere/Ejercicio-Beego/agenda_pruebas_v1/controllers"
 
-	beego "github.com/beego/beego/v2/server/web"
+	"github.com/astaxie/beego"
 )
 
 func init() {
 	ns := beego.NewNamespace("/v1",
-
-		beego.NSNamespace("/area_tipo",
-			beego.NSInclude(
-				&controllers.AreaTipoController{},
-			),
-		),
-
-		beego.NSNamespace("/tipo_parametro",
-			beego.NSInclude(
-				&controllers.TipoParametroController{},
-			),
-		),
-
-		beego.NSNamespace("/parametro",
-			beego.NSInclude(
-				&controllers.ParametroController{},
-			),
-		),
-
-		beego.NSNamespace("/parametro_periodo",
-			beego.NSInclude(
-				&controllers.ParametroPeriodoController{},
-			),
-		),
-
-		beego.NSNamespace("/periodo",
-			beego.NSInclude(
-				&controllers.PeriodoController{},
-			),
-		),
 
 		beego.NSNamespace("/contacto",
 			beego.NSInclude(
