@@ -1,0 +1,15 @@
+# Ignora ciertos directorios y archivos
+.vscode/
+titan_api_crud
+main
+.scannerwork/
+swagger/**
+
+# Permite el seguimiento de archivos específicos
+!swagger/swagger.json
+!swagger/swagger.yml
+lastupdate.tmp
+.env
+
+# Ignora cualquier otro archivo con extensión .env
+*.env

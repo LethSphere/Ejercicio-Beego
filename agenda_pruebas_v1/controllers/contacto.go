@@ -3,11 +3,11 @@ package controllers
 import (
 	"encoding/json"
 	"errors"
-	"github.com/udistrital/Ejercicio-Beego/agenda_pruebas_v1/models"
 	"strconv"
 	"strings"
 
-	beego "github.com/beego/beego/v2/server/web"
+	"github.com/LethSphere/Ejercicio-Beego/agenda_pruebas_v1/models"
+	"github.com/astaxie/beego"
 )
 
 // ContactoController operations for Contacto
