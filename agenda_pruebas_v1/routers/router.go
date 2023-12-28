@@ -8,7 +8,7 @@
 package routers
 
 import (
-	"github.com/udistrital/Ejercicio-Beego/agenda_pruebas_v1/controllers"
+	"github.com/LethSphere/Ejercicio-Beego/agenda_pruebas_v1/controllers"
 
 	beego "github.com/beego/beego/v2/server/web"
 )

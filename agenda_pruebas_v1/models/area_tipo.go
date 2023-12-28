@@ -11,7 +11,7 @@ import (
 )
 
 type AreaTipo struct {
-	Id                int       `orm:"column(id);pk"`
+	Id                int       `orm:"column(id);pk;auto"`
 	Nombre            string    `orm:"column(nombre)"`
 	Descripcion       string    `orm:"column(descripcion);null"`
 	CodigoAbreviacion string    `orm:"column(codigo_abreviacion);null"`
@@ -53,7 +53,7 @@ func GetAreaTipoById(id int) (v *AreaTipo, err error) {
 func GetAllAreaTipo(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(AreaTipo))
+	qs := o.QueryTable(new(AreaTipo)).RelatedSel()
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

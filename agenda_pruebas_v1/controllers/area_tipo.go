@@ -3,9 +3,10 @@ package controllers
 import (
 	"encoding/json"
 	"errors"
-	"github.com/udistrital/Ejercicio-Beego/agenda_pruebas_v1/models"
 	"strconv"
 	"strings"
+
+	"github.com/LethSphere/Ejercicio-Beego/agenda_pruebas_v1/models"
 
 	beego "github.com/beego/beego/v2/server/web"
 )
