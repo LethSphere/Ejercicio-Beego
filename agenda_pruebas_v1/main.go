@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/astaxie/beego/plugins/cors"
 	_ "github.com/LethSphere/Ejercicio-Beego/agenda_pruebas_v1/routers"
+	"github.com/astaxie/beego/plugins/cors"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
@@ -18,7 +18,7 @@ func main() {
 		beego.AppConfig.String("PGhost")+":"+
 		beego.AppConfig.String("PGport")+"/"+
 		beego.AppConfig.String("PGdb")+"?sslmode=disable&search_path="+
-		beego.AppConfig.String("PGschema"))
+		beego.AppConfig.String("PGschema")+"")
 	fmt.Println("postgres://" +
 		beego.AppConfig.String("PGuser") + ":" +
 		beego.AppConfig.String("PGpass") + "@" +
@@ -28,6 +28,7 @@ func main() {
 		beego.AppConfig.String("PGschema") + "")
 	if beego.BConfig.RunMode == "dev" {
 		beego.BConfig.WebConfig.DirectoryIndex = true
+		beego.BConfig.WebConfig.EnableDocs = true
 		beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
 
 	}
